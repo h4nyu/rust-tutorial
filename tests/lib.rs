@@ -1,15 +1,14 @@
 #[cfg(test)]
 mod tests {
-    use app::client::connect;
-    use app::network::server;
+    use app::models::Human;
+    use app::models::Mammals;
 
     #[test]
-    fn it_works() {
-        connect()
+    fn point() {
+        let p = Human {
+            age: 1
+        };
+        p.do_mammals_work();
     }
 
-    #[test]
-    fn server_it_works() {
-        server::connect()
-    }
 }
