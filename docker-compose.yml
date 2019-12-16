@@ -4,5 +4,8 @@ services:
   app: &default-app
     build: &default-build
       context: .
+    ports:
+      - "${WEB_PORT}:80"
+    command: cargo run
     volumes: 
       - ./:/srv
